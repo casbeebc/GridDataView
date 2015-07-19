@@ -13,6 +13,17 @@
 		8BEEF2C81B5AEC70007DACE1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BEEF2C71B5AEC70007DACE1 /* Images.xcassets */; };
 		8BEEF2CB1B5AEC70007DACE1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BEEF2C91B5AEC70007DACE1 /* LaunchScreen.xib */; };
 		8BEEF2D71B5AEC70007DACE1 /* DataGridViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEEF2D61B5AEC70007DACE1 /* DataGridViewTests.swift */; };
+		8BEEF2E21B5AEC8F007DACE1 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEEF2E11B5AEC8F007DACE1 /* Node.swift */; };
+		8BEEF2E41B5AEDD4007DACE1 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEEF2E31B5AEDD4007DACE1 /* Scene.swift */; };
+		8BEEF2E81B5AF003007DACE1 /* Cube.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEEF2E71B5AF003007DACE1 /* Cube.swift */; };
+		8BEEF2EA1B5AF022007DACE1 /* Vertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEEF2E91B5AF022007DACE1 /* Vertex.swift */; };
+		8BEEF2EC1B5AF044007DACE1 /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEEF2EB1B5AF044007DACE1 /* Triangle.swift */; };
+		8BEEF2EE1B5B113F007DACE1 /* MetalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEEF2ED1B5B113F007DACE1 /* MetalViewController.swift */; };
+		8BEEF2F01B5B1162007DACE1 /* BufferProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEEF2EF1B5B1162007DACE1 /* BufferProvider.swift */; };
+		8BEEF2F21B5B117F007DACE1 /* MetalTexture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEEF2F11B5B117F007DACE1 /* MetalTexture.swift */; };
+		8BEEF2F61B5B1318007DACE1 /* Matrix4.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEEF2F51B5B1318007DACE1 /* Matrix4.m */; };
+		8BEEF2F81B5B210C007DACE1 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 8BEEF2F71B5B210C007DACE1 /* Shaders.metal */; };
+		8BEEF2FA1B5B22DE007DACE1 /* cube.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BEEF2F91B5B22DE007DACE1 /* cube.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +47,19 @@
 		8BEEF2D01B5AEC70007DACE1 /* DataGridViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataGridViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BEEF2D51B5AEC70007DACE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8BEEF2D61B5AEC70007DACE1 /* DataGridViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataGridViewTests.swift; sourceTree = "<group>"; };
+		8BEEF2E11B5AEC8F007DACE1 /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
+		8BEEF2E31B5AEDD4007DACE1 /* Scene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
+		8BEEF2E71B5AF003007DACE1 /* Cube.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cube.swift; sourceTree = "<group>"; };
+		8BEEF2E91B5AF022007DACE1 /* Vertex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vertex.swift; sourceTree = "<group>"; };
+		8BEEF2EB1B5AF044007DACE1 /* Triangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
+		8BEEF2ED1B5B113F007DACE1 /* MetalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalViewController.swift; sourceTree = "<group>"; };
+		8BEEF2EF1B5B1162007DACE1 /* BufferProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BufferProvider.swift; sourceTree = "<group>"; };
+		8BEEF2F11B5B117F007DACE1 /* MetalTexture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalTexture.swift; sourceTree = "<group>"; };
+		8BEEF2F31B5B11A5007DACE1 /* Matrix4.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Matrix4.h; sourceTree = "<group>"; };
+		8BEEF2F41B5B1318007DACE1 /* DataGridView-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DataGridView-Bridging-Header.h"; sourceTree = "<group>"; };
+		8BEEF2F51B5B1318007DACE1 /* Matrix4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Matrix4.m; sourceTree = "<group>"; };
+		8BEEF2F71B5B210C007DACE1 /* Shaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
+		8BEEF2F91B5B22DE007DACE1 /* cube.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cube.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +101,22 @@
 		8BEEF2BD1B5AEC70007DACE1 /* DataGridView */ = {
 			isa = PBXGroup;
 			children = (
+				8BEEF2F91B5B22DE007DACE1 /* cube.png */,
+				8BEEF2E01B5AEC80007DACE1 /* Nodes */,
 				8BEEF2C01B5AEC70007DACE1 /* AppDelegate.swift */,
 				8BEEF2C21B5AEC70007DACE1 /* ViewController.swift */,
 				8BEEF2C41B5AEC70007DACE1 /* Main.storyboard */,
 				8BEEF2C71B5AEC70007DACE1 /* Images.xcassets */,
 				8BEEF2C91B5AEC70007DACE1 /* LaunchScreen.xib */,
 				8BEEF2BE1B5AEC70007DACE1 /* Supporting Files */,
+				8BEEF2E91B5AF022007DACE1 /* Vertex.swift */,
+				8BEEF2ED1B5B113F007DACE1 /* MetalViewController.swift */,
+				8BEEF2EF1B5B1162007DACE1 /* BufferProvider.swift */,
+				8BEEF2F11B5B117F007DACE1 /* MetalTexture.swift */,
+				8BEEF2F31B5B11A5007DACE1 /* Matrix4.h */,
+				8BEEF2F71B5B210C007DACE1 /* Shaders.metal */,
+				8BEEF2F51B5B1318007DACE1 /* Matrix4.m */,
+				8BEEF2F41B5B1318007DACE1 /* DataGridView-Bridging-Header.h */,
 			);
 			path = DataGridView;
 			sourceTree = "<group>";
@@ -110,6 +144,17 @@
 				8BEEF2D51B5AEC70007DACE1 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8BEEF2E01B5AEC80007DACE1 /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				8BEEF2E11B5AEC8F007DACE1 /* Node.swift */,
+				8BEEF2E31B5AEDD4007DACE1 /* Scene.swift */,
+				8BEEF2E71B5AF003007DACE1 /* Cube.swift */,
+				8BEEF2EB1B5AF044007DACE1 /* Triangle.swift */,
+			);
+			name = Nodes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,6 +239,7 @@
 			files = (
 				8BEEF2C61B5AEC70007DACE1 /* Main.storyboard in Resources */,
 				8BEEF2CB1B5AEC70007DACE1 /* LaunchScreen.xib in Resources */,
+				8BEEF2FA1B5B22DE007DACE1 /* cube.png in Resources */,
 				8BEEF2C81B5AEC70007DACE1 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -212,8 +258,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BEEF2F81B5B210C007DACE1 /* Shaders.metal in Sources */,
+				8BEEF2E41B5AEDD4007DACE1 /* Scene.swift in Sources */,
+				8BEEF2E81B5AF003007DACE1 /* Cube.swift in Sources */,
+				8BEEF2F01B5B1162007DACE1 /* BufferProvider.swift in Sources */,
+				8BEEF2E21B5AEC8F007DACE1 /* Node.swift in Sources */,
 				8BEEF2C31B5AEC70007DACE1 /* ViewController.swift in Sources */,
+				8BEEF2F21B5B117F007DACE1 /* MetalTexture.swift in Sources */,
 				8BEEF2C11B5AEC70007DACE1 /* AppDelegate.swift in Sources */,
+				8BEEF2EC1B5AF044007DACE1 /* Triangle.swift in Sources */,
+				8BEEF2EE1B5B113F007DACE1 /* MetalViewController.swift in Sources */,
+				8BEEF2F61B5B1318007DACE1 /* Matrix4.m in Sources */,
+				8BEEF2EA1B5AF022007DACE1 /* Vertex.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,9 +398,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = DataGridView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DataGridView/DataGridView-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -352,9 +411,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = DataGridView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DataGridView/DataGridView-Bridging-Header.h";
 			};
 			name = Release;
 		};

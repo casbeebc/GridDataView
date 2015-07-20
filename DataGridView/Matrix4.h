@@ -10,9 +10,9 @@
 #import <UIKit/UIKit.h>
 #import <GLKit/GLKMath.h>
 
-// Wraper around GLKMath's GLKMatrix4, because we can't use it directly from Swift code
+// Wrapper around GLKMath's GLKMatrix4, because we can't use it directly from Swift code
 
-@interface Matrix4 : NSObject{
+@interface Matrix4 : NSObject {
 @public
     GLKMatrix4 glkMatrix;
 }

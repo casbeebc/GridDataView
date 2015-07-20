@@ -17,6 +17,7 @@ class ViewController: MetalViewController, MetalViewControllerDelegate  {
     var lastPanLocation: CGPoint!
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
         worldModelMatrix = Matrix4()
@@ -29,37 +30,49 @@ class ViewController: MetalViewController, MetalViewControllerDelegate  {
         setupGestures()
     }
     
-    //MARK: - MetalViewControllerDelegate
+    
+    /*
+     * MetalViewControllerDelegate functions
+     */
     func renderObjects(drawable:CAMetalDrawable) {
         
         objectToDraw.render(commandQueue, pipelineState: pipelineState, drawable: drawable, parentModelViewMatrix: worldModelMatrix, projectionMatrix: projectionMatrix, clearColor: nil)
+        
     }
     
     func updateLogic(timeSinceLastUpdate: CFTimeInterval) {
+        
         objectToDraw.updateWithDelta(timeSinceLastUpdate)
+        
     }
     
-    //MARK: - Gesture related
-    // 1
-    func setupGestures(){
+    /*
+     * Gesture related functions
+     */
+    
+    func setupGestures() {
         var pan = UIPanGestureRecognizer(target: self, action: Selector("pan:"))
         self.view.addGestureRecognizer(pan)
     }
     
-    // 2
-    func pan(panGesture: UIPanGestureRecognizer){
-        if panGesture.state == UIGestureRecognizerState.Changed{
+    func pan(panGesture: UIPanGestureRecognizer) {
+        
+        if panGesture.state == UIGestureRecognizerState.Changed {
+            
             var pointInView = panGesture.locationInView(self.view)
-            // 3
             var xDelta = Float((lastPanLocation.x - pointInView.x)/self.view.bounds.width) * panSensivity
             var yDelta = Float((lastPanLocation.y - pointInView.y)/self.view.bounds.height) * panSensivity
-            // 4
+            
             objectToDraw.rotationY -= xDelta
             objectToDraw.rotationX -= yDelta
             lastPanLocation = pointInView
+            
         } else if panGesture.state == UIGestureRecognizerState.Began{
+            
             lastPanLocation = panGesture.locationInView(self.view)
-        } 
+            
+        }
+        
     }
 
 }

@@ -8,11 +8,6 @@ import UIKit
 import Metal
 import QuartzCore
 
-protocol MetalViewControllerDelegate : class{
-    func updateLogic(timeSinceLastUpdate:CFTimeInterval)
-    func renderObjects(drawable:CAMetalDrawable)
-}
-
 class MetalViewController: UIViewController {
     
     var device: MTLDevice! = nil
@@ -26,6 +21,7 @@ class MetalViewController: UIViewController {
     weak var metalViewControllerDelegate:MetalViewControllerDelegate?
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
         projectionMatrix = Matrix4.makePerspectiveViewAngle(Matrix4.degreesToRad(85.0), aspectRatio: Float(self.view.bounds.size.width / self.view.bounds.size.height), nearZ: 0.01, farZ: 100.0)
@@ -60,8 +56,11 @@ class MetalViewController: UIViewController {
         
         var pipelineError : NSError?
         pipelineState = device.newRenderPipelineStateWithDescriptor(pipelineStateDescriptor, error: &pipelineError)
+        
         if pipelineState == nil {
+            
             println("Failed to create pipeline state, error \(pipelineError)")
+            
         }
         
         timer = CADisplayLink(target: self, selector: Selector("newFrame:"))
@@ -69,29 +68,36 @@ class MetalViewController: UIViewController {
         
     }
     
-    //1
     override func viewDidLayoutSubviews() {
+        
         super.viewDidLayoutSubviews()
         
         if let window = view.window {
+            
             let scale = window.screen.nativeScale
             let layerSize = view.bounds.size
-            //2
+
             view.contentScaleFactor = scale
             metalLayer.frame = CGRectMake(0, 0, layerSize.width, layerSize.height)
             metalLayer.drawableSize = CGSizeMake(layerSize.width * scale, layerSize.height * scale)
+            
         }
+        
         projectionMatrix = Matrix4.makePerspectiveViewAngle(Matrix4.degreesToRad(85.0), aspectRatio: Float(self.view.bounds.size.width / self.view.bounds.size.height), nearZ: 0.01, farZ: 100.0)
+        
     }
     
     func render() {
-        if let drawable = metalLayer.nextDrawable(){
+        
+        if let drawable = metalLayer.nextDrawable() {
+            
             self.metalViewControllerDelegate?.renderObjects(drawable)
+            
         }
     }
     
     
-    func newFrame(displayLink: CADisplayLink){
+    func newFrame(displayLink: CADisplayLink) {
         
         if lastFrameTimestamp == 0.0
         {
@@ -102,6 +108,7 @@ class MetalViewController: UIViewController {
         lastFrameTimestamp = displayLink.timestamp
         
         gameloop(timeSinceLastUpdate: elapsed)
+        
     }
     
     func gameloop(#timeSinceLastUpdate: CFTimeInterval) {
@@ -109,7 +116,9 @@ class MetalViewController: UIViewController {
         self.metalViewControllerDelegate?.updateLogic(timeSinceLastUpdate)
         
         autoreleasepool {
+            
             self.render()
+            
         }
     }
     

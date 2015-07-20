@@ -24,6 +24,7 @@
 		8BEEF2F61B5B1318007DACE1 /* Matrix4.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEEF2F51B5B1318007DACE1 /* Matrix4.m */; };
 		8BEEF2F81B5B210C007DACE1 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 8BEEF2F71B5B210C007DACE1 /* Shaders.metal */; };
 		8BEEF2FA1B5B22DE007DACE1 /* cube.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BEEF2F91B5B22DE007DACE1 /* cube.png */; };
+		8BEEF2FC1B5C21A4007DACE1 /* MetalViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEEF2FB1B5C21A4007DACE1 /* MetalViewControllerDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		8BEEF2F51B5B1318007DACE1 /* Matrix4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Matrix4.m; sourceTree = "<group>"; };
 		8BEEF2F71B5B210C007DACE1 /* Shaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
 		8BEEF2F91B5B22DE007DACE1 /* cube.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cube.png; sourceTree = "<group>"; };
+		8BEEF2FB1B5C21A4007DACE1 /* MetalViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalViewControllerDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 		8BEEF2BD1B5AEC70007DACE1 /* DataGridView */ = {
 			isa = PBXGroup;
 			children = (
+				8BEEF2FD1B5C21EF007DACE1 /* Metal */,
 				8BEEF2F91B5B22DE007DACE1 /* cube.png */,
 				8BEEF2E01B5AEC80007DACE1 /* Nodes */,
 				8BEEF2C01B5AEC70007DACE1 /* AppDelegate.swift */,
@@ -109,14 +112,6 @@
 				8BEEF2C71B5AEC70007DACE1 /* Images.xcassets */,
 				8BEEF2C91B5AEC70007DACE1 /* LaunchScreen.xib */,
 				8BEEF2BE1B5AEC70007DACE1 /* Supporting Files */,
-				8BEEF2E91B5AF022007DACE1 /* Vertex.swift */,
-				8BEEF2ED1B5B113F007DACE1 /* MetalViewController.swift */,
-				8BEEF2EF1B5B1162007DACE1 /* BufferProvider.swift */,
-				8BEEF2F11B5B117F007DACE1 /* MetalTexture.swift */,
-				8BEEF2F31B5B11A5007DACE1 /* Matrix4.h */,
-				8BEEF2F71B5B210C007DACE1 /* Shaders.metal */,
-				8BEEF2F51B5B1318007DACE1 /* Matrix4.m */,
-				8BEEF2F41B5B1318007DACE1 /* DataGridView-Bridging-Header.h */,
 			);
 			path = DataGridView;
 			sourceTree = "<group>";
@@ -155,6 +150,22 @@
 				8BEEF2EB1B5AF044007DACE1 /* Triangle.swift */,
 			);
 			name = Nodes;
+			sourceTree = "<group>";
+		};
+		8BEEF2FD1B5C21EF007DACE1 /* Metal */ = {
+			isa = PBXGroup;
+			children = (
+				8BEEF2E91B5AF022007DACE1 /* Vertex.swift */,
+				8BEEF2ED1B5B113F007DACE1 /* MetalViewController.swift */,
+				8BEEF2EF1B5B1162007DACE1 /* BufferProvider.swift */,
+				8BEEF2F11B5B117F007DACE1 /* MetalTexture.swift */,
+				8BEEF2F31B5B11A5007DACE1 /* Matrix4.h */,
+				8BEEF2F71B5B210C007DACE1 /* Shaders.metal */,
+				8BEEF2F51B5B1318007DACE1 /* Matrix4.m */,
+				8BEEF2F41B5B1318007DACE1 /* DataGridView-Bridging-Header.h */,
+				8BEEF2FB1B5C21A4007DACE1 /* MetalViewControllerDelegate.swift */,
+			);
+			name = Metal;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,6 +280,7 @@
 				8BEEF2EC1B5AF044007DACE1 /* Triangle.swift in Sources */,
 				8BEEF2EE1B5B113F007DACE1 /* MetalViewController.swift in Sources */,
 				8BEEF2F61B5B1318007DACE1 /* Matrix4.m in Sources */,
+				8BEEF2FC1B5C21A4007DACE1 /* MetalViewControllerDelegate.swift in Sources */,
 				8BEEF2EA1B5AF022007DACE1 /* Vertex.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -472,6 +484,7 @@
 				8BEEF2DC1B5AEC70007DACE1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8BEEF2DD1B5AEC70007DACE1 /* Build configuration list for PBXNativeTarget "DataGridViewTests" */ = {
 			isa = XCConfigurationList;
@@ -480,6 +493,7 @@
 				8BEEF2DF1B5AEC70007DACE1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
